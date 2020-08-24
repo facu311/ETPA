@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<BODY background="ropa.jpg">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<center>
+<table style="width: 50%" bgcolor="black">
+	
+	<tr bgcolor="black">
+		
+		<td>
+			
+		<font face="Helvetica" color="white">
+		vas a ir a la entrevista de la pizzeria, pero no sabes que ropa ponerte, no queres parecer irrespetuoso pero tampoco pretencioso
+		</font>
+		</td>
+		
+	</tr>
+	
+</table>
+</center>
+<li> <a href="1.2.HTML">Ropa casual</a></li>
+<li> <a href="1.1.HTML">Ropa formal</a></li>
+
+<?php
+
+function contador()
+{
+$archivo ="contador.txt";
+$contador = 0;
+$f= fopen($archivo, "r");
+
+if ($f) {
+	$contador= fread($f, filesize($archivo));
+	$contador++;
+	fclose($f);
+}
+$f= fopen($archivo, "w+");
+if ($f) {
+	fwrite($f, $contador);
+	fclose($f);
+}
+	return $contador;
+}
+$visitante=contador();
+echo "eres el visitante :".$visitante;
+?>
+</!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+funciona combinado?
+<?php 
+echo "eres el visitante :".$visitante;
+?>
+
+</body>
+</html>
+</BODY>
+</html>
